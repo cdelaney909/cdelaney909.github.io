@@ -1,0 +1,31 @@
+body{
+	background-color: #64B6AC;
+	font-family:Verdana, sans-serif;
+}
+
+#output{
+	width: 600px;
+	height: 200px;
+	border: thin solid white;
+	padding: 10px;
+	
+}
+.button{
+	background-color: #c0fdfb;
+	border: none;
+	outline: none;
+	padding:15px 32px;
+	font-size:1.5em;
+	font-family:Verdana, sans-serif;
+	border-radius:10px;
+	transition-duration: 0.7s;
+	width: 200px;
+	margin-bottom:20px;
+}
+
+.button:hover{
+	color: white;
+	background-color: black;
+	
+}
+
