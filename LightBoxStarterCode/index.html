@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>(Mostly) Horse Pictures</title>
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="lightbox.js"></script>
+  </head>
+  <body>
+    <!-- page content -->
+    <h1>(Mostly) Horse Pictures</h1>
+	
+	<div id="main">
+		<img class="thumb" src="images/arabian-thumb.jpg" alt="Bay Arabian cantering" onclick=" displayLightBox('arabian.jpg', 'Bay Arabian cantering')">
+		<img class="thumb" src="images/dog-thumb.jpg" alt="Yellow lab puppy" onclick=" displayLightBox('dog.jpg', 'Yellow lab puppy')">
+		<img class="thumb" src="images/horse-thumb.jpg" alt="Horse Running" onclick=" displayLightBox('horse.jpg', 'Horse running')">
+		<img class="thumb" src="images/horseandpony-thumb.jpg" alt="Yellow lab puppy" onclick=" displayLightBox('horseandpony.jpg', 'Horse an pony running')">
+		<img class="thumb" src="images/pinto-thumb.jpg" alt="Pinto horse" onclick=" displayLightBox('pinto.jpg', 'Pinto horse')">
+		<img class="thumb" src="images/tb-thumb.jpg" alt="Brown horse galloping" onclick=" displayLightBox('tb.jpg', 'Brown horse galloping')">		
+	
+	</div>
+	
+	<div id="lightbox" class="hidden"></div>
+	
+	<div id="positionBigImage">
+	
+		<div id="boundaryBigImage" class="hidden">
+			<img id="x" src="images/x.png" alt="close" onclick=" displayLightBox('','')">
+			<img id="bigImage" src="images/arabian.jpg" alt="Bay Arabian cantering"> 
+		
+		</div>
+		
+	</div> 
+	
+  </body>
+</html> 
