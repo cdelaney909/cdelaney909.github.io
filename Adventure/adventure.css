@@ -21,99 +21,99 @@ body{
 
 /**Enemy**/
 .enemyDown{
-	background-image:url("images/enemydown.png"); 
+	background-image:url("Images/enemydown.png"); 
 }
 
 .enemyLeft{
-	background-image:url("images/enemyleft.png"); 
+	background-image:url("Images/enemyleft.png"); 
 }
 
 .enemyRight{
-	background-image:url("images/enemyright.png"); 
+	background-image:url("Images/enemyright.png"); 
 }
 
 .enemyUp{
-	background-image:url("images/enemyup.png"); 
+	background-image:url("Images/enemyup.png"); 
 }
 /**Fence**/
 .fenceSide{
-	background-image:url("images/fenceside.png");
+	background-image:url("Images/fenceside.png");
 }
 
 .fenceUp{
-	background-image:url("images/fenceup.png");
+	background-image:url("Images/fenceup.png");
 }
 
 .flag{
-	background-image:url("images/flag.png");
+	background-image:url("Images/flag.png");
 }
 
 /**Motorcycle**/
 .motorcycleDown{
-	background-image:url("images/motorcycledown.png");
+	background-image:url("Images/motorcycledown.png");
 }
 
 .motorcycleLeft{
-	background-image:url("images/motorcycleleft.png");
+	background-image:url("Images/motorcycleleft.png");
 }
 
 .motorcycleRight{
-	background-image:url("images/motorcycleright.png");
+	background-image:url("Images/motorcycleright.png");
 }
 
 .motorcycleUp{
-	background-image:url("images/motorcycleup.png");
+	background-image:url("Images/motorcycleup.png");
 }
 
 /**Motorcycle Fence**/
 .motorcycleFenceDown{
-	background-image:url("images/motorcyclefencedown.png");
+	background-image:url("Images/motorcyclefencedown.png");
 }
 
 .motorcycleFenceUp{
-	background-image:url("images/motorcyclefenceup.png");
+	background-image:url("Images/motorcyclefenceup.png");
 }
 
 .motorcycleFenceRight{
-	background-image:url("images/motorcyclefenceright.png");
+	background-image:url("Images/motorcyclefenceright.png");
 }
 
 .motorcycleFenceLeft{
-	background-image:url("images/motorcyclefenceleft.png");
+	background-image:url("Images/motorcyclefenceleft.png");
 }
 
  /**Passenger**/
 .passenger{
-	background-image:url("images/passenger.png");
+	background-image:url("Images/passenger.png");
 }
 
 .passengerDown{
-	background-image:url("images/passengerdown.png");
+	background-image:url("Images/passengerdown.png");
 }
 
 .passengerLeft{
-	background-image:url("images/passengerleft.png");
+	background-image:url("Images/passengerleft.png");
 }
 
 .passengerRight{
-	background-image:url("images/passengerright.png");
+	background-image:url("Images/passengerright.png");
 }
 
 .passengerUp{
-	background-image:url("images/passengerup.png");
+	background-image:url("Images/passengerup.png");
 }
 
 /**Enviroment**/
 .rock{
-	background-image:url("images/rock.png");
+	background-image:url("Images/rock.png");
 }
 
 .water{
-	background-image:url("images/water.jpg");
+	background-image:url("Images/water.jpg");
 }
 
 .tree{
-	background-image:url("images/tree.png");
+	background-image:url("Images/tree.png");
 }
 
 
