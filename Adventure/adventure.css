@@ -49,19 +49,19 @@ body{
 }
 
 /**Motorcycle**/
-.motorcycleDown{
+.motorcycledown{
 	background-image:url("Images/motorcycledown.png");
 }
 
-.motorcycleLeft{
+.motorcycleleft{
 	background-image:url("Images/motorcycleleft.png");
 }
 
-.motorcycleRight{
+.motorcycleright{
 	background-image:url("Images/motorcycleright.png");
 }
 
-.motorcycleUp{
+.motorcycleup{
 	background-image:url("Images/motorcycleup.png");
 }
 
@@ -87,19 +87,19 @@ body{
 	background-image:url("Images/passenger.png");
 }
 
-.passengerDown{
+.passengerdown{
 	background-image:url("Images/passengerdown.png");
 }
 
-.passengerLeft{
+.passengerleft{
 	background-image:url("Images/passengerleft.png");
 }
 
-.passengerRight{
+.passengerright{
 	background-image:url("Images/passengerright.png");
 }
 
-.passengerUp{
+.passengerup{
 	background-image:url("Images/passengerup.png");
 }
 
@@ -116,15 +116,25 @@ body{
 	background-image:url("Images/tree.png");
 }
 
-
-
-
-
-
-
-
 .bridge {
 	background-color:#800020 !important;
+}
+
+
+.message{
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.8);
+	color:white;
+	font-family:Verdana,sans serif;
+	font-size:8em;
+	vertical-align:top;
+	text-align:center;
+	line-height:100vh;
 }
 
  
