@@ -50,36 +50,36 @@ body{
 
 /**Motorcycle**/
 .motorcycledown{
-	background-image:url("Images/motorcycledown.png");
+	background-image:url("Images/horsedown.png");
 }
 
 .motorcycleleft{
-	background-image:url("Images/motorcycleleft.png");
+	background-image:url("Images/horseleft.png");
 }
 
 .motorcycleright{
-	background-image:url("Images/motorcycleright.png");
+	background-image:url("Images/horseright.png");
 }
 
 .motorcycleup{
-	background-image:url("Images/motorcycleup.png");
+	background-image:url("Images/horseup.png");
 }
 
 /**Motorcycle Fence**/
 .motorcycleFenceDown{
-	background-image:url("Images/motorcyclefencedown.png");
+	background-image:url("Images/fencedown.png");
 }
 
 .motorcycleFenceUp{
-	background-image:url("Images/motorcyclefenceup.png");
+	background-image:url("Images/fencejumpup.png");
 }
 
 .motorcycleFenceRight{
-	background-image:url("Images/motorcyclefenceright.png");
+	background-image:url("Images/fenceright.png");
 }
 
 .motorcycleFenceLeft{
-	background-image:url("Images/motorcyclefenceleft.png");
+	background-image:url("Images/fenceleft.png");
 }
 
  /**Passenger**/
@@ -131,10 +131,87 @@ body{
 	background-color:rgba(0,0,0,0.8);
 	color:white;
 	font-family:Verdana,sans serif;
-	font-size:8em;
+	font-size:4em;
 	vertical-align:top;
 	text-align:center;
 	line-height:100vh;
+}
+
+.intro {
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.8);
+	color:white;
+	font-family:Verdana,sans serif;
+	font-size:2em;
+	vertical-align:top;
+	text-align:center;
+	line-height:100vh;
+}
+
+.first {
+	position:absolute;
+	top:60vh;
+	right:90vh;
+	height:40px;
+	width:100px;
+	background-color:#cf7500;
+	color:#ffffff;
+	border-radius:10px;
+	transition-duration: 0.7s;
+	border: none;
+	outline: none;
+	
+}
+
+.first:hover{
+	color: white;
+	background-color: black;
+}
+
+.continue {
+	position:absolute;
+	top:60vh;
+	right:100vh;
+	height:40px;
+	width:100px;
+	background-color:#cf7500;
+	color:#ffffff;
+	border-radius:10px;
+	transition-duration: 0.7s;
+	border: none;
+	outline: none;
+	
+}
+
+.continue:hover{
+	color: white;
+	background-color: black;
+}
+
+
+.skip {
+	position:absolute;
+	top:60vh;
+	right:110vh;
+	height:40px;
+	width:100px;
+	background-color:#cf7500;
+	color:#ffffff;
+	border-radius:10px;
+	transition-duration: 0.7s;
+	border: none;
+	outline: none;
+	
+}
+
+.skip:hover{
+	color: white;
+	background-color: black;
 }
 
  

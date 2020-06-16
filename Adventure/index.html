@@ -45,8 +45,40 @@
 	<div></div>
 	</div>
 
-	<div class="message" id="lose">You Lose</div>
+	
+
+	<div class="intro" id="title">Welcome To Albert and Simons Adventure
+	  <button class="first" onclick="loadIntro()">Continue</button>
+	   <button class="skip" onclick="loadLevel()">Skip Intro</button>
+	</div>
+	
+	<div class="intro" id="two">You are a horse and you must pick up your rider and make it to the flag.
+	<button class="continue" onclick="loadIntro1()">Continue</button>
+	</div>
+	
+	<div class="intro" id="three">Use the arrow keys to move the horse around the board.
+	<button class="continue" onclick="loadIntro2()">Continue</button>
+	</div>
+	
+	<div class="intro" id="four">Avoid enemys, water, rocks and trees to make it to the flag.
+	<button class="continue" onclick="loadIntro3()">Continue</button>
+	</div>
+	
+	<div class="intro" id="five">To jump over fence you must have your rider onboard. Good Luck
+	<button class="continue" onclick="loadLevel()">Start</button>
+	</div>
+	
 	<div class="message" id="levelup">Next Level....</div>
+	<div class="message" id="lose">You Lose
+	<button class="continue" onclick="reload()">Restart</button>
+	</div>
+	<div class="message" id="win">You Win! Thank You for Playing
+	<button class="continue" onclick="reload()">Restart</button>
+	</div>
+	
+
+	
+	
 
 	 <script src="adventure.js"></script>
   </body>

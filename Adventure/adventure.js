@@ -19,7 +19,21 @@ const levels = [
    "flag", "fenceUp", "", "fenceUp", "passenger",
    "motorcycledown", "fenceUp", "rock", "fenceUp", "",
    "", "fenceUp", "", "fenceUp", "",
-   "", "animate", "animate", "animate", "animate"]
+   "", "animate", "animate", "animate", "animate"],
+   
+   //level 3
+   ["tree", "passenger", "", "water", "motorcycledown",
+   "tree", "water", "bridge", "water", "",
+   "rock", "fenceUp", "", "water", "",
+   "flag", "fenceUp", "", "water", "",
+   "tree", "animate", "animate", " bridge animate", "animate"],
+   
+   //level 4
+    ["water", "water", "", "fenceUp", "flag",
+   "water", "water", "bridge", "water", "water",
+   "bridge animate", "bridge animate", "bridge animate", "bridge animate", "water",
+   "bridge", "water", "water", "bridge", "water",
+   "motorcycleup", "water", "water", "bridge ","passenger"]
    
    ];
 
@@ -29,13 +43,16 @@ var passengerOn = false;
 var currentLocationOfMotorcycle = 0;
 var currentAnimation; //allows one animation per level
 var widthOfBoard = 5;
+var levelCount = 0;
 
 const gridBoxes = document.querySelectorAll("#gameBoard div"); 
 const noPassObstacles = ["rock", "tree", "water"];
 
+
 //loads level into window
 window.addEventListener("load", function () {
-	loadLevel();
+	document.getElementById("title").style.display = "block";
+	//loadLevel();
 });
 
 //move horse
@@ -71,6 +88,9 @@ function loadLevel(){
 	let animateBoxes;
 	passengerOn = false;
 	
+	document.getElementById("title").style.display = "none";
+	document.getElementById("five").style.display = "none";
+	
 	//load board
 	for (i = 0; i < gridBoxes.length; i++){
 		gridBoxes[i].className = levelMap[i];
@@ -83,6 +103,15 @@ function loadLevel(){
 
 //animate enemy left to right
 function animateEnemy(boxes, index, direction) {
+	
+	let checkClass = boxes[index].className;
+	
+	//ends game if enemy collides with player
+	if(checkClass.includes("motorcycle")){
+		document.getElementById("lose").style.display = "block";
+		clearTimeout(currentAnimation);
+		return;
+	}
 	
 	//exit functio if no animati9on
 	if (boxes.length <= 0) {return;}
@@ -145,6 +174,8 @@ function tryToMove(direction) {
 	let nextLocation2 = 0;
 	let nextClass2 = "";
 	
+	 let location1 = "";
+	
 	//move horse
 	switch (direction) {
 		case "left":
@@ -168,7 +199,7 @@ function tryToMove(direction) {
 		return;
 	}//if
 	
-	//if its a fence, and there is no , don't move
+	//if its a fence, and there is no rider , don't move
 	if (!passengerOn && nextClass.includes("fence")){
 		return;
 	}//if
@@ -176,6 +207,26 @@ function tryToMove(direction) {
 	//if there is a fence, rider is on move horse two spaces and animate
 	if(nextClass.includes("fence")) {
 		
+	
+	//get class of landing location after jump
+	if (direction == "left") {
+		 location1 = nextLocation - 1;
+	} else if (direction == "right") {
+		 location1 = nextLocation + 1;
+	} else if (direction == "up") {
+		 location1 = nextLocation - widthOfBoard;
+	} else if (direction == "down") {
+		 location1 = nextLocation + widthOfBoard;
+	}// else if
+	
+	//assign class of landing spot
+	nextClass2 = gridBoxes[location1].className;	
+	
+	//if landing class contains a non passable object don't jump
+	if (noPassObstacles.includes(nextClass2) || nextClass2.includes("fence")) {
+		return;
+	}//if 
+	
 		if(passengerOn) {
 			gridBoxes[currentLocationOfMotorcycle].className = "";
 			oldClassName = gridBoxes[nextLocation].className;
@@ -197,7 +248,7 @@ function tryToMove(direction) {
 				nextClass2 = "passengerdown";
 				nextLocation2 = nextLocation + widthOfBoard;
 			}//else if
-			
+
 			//show horse jumping
 			gridBoxes[nextLocation].className = nextClass;
 			
@@ -254,9 +305,10 @@ function tryToMove(direction) {
 	//if moved into enemy, end game
 	if(nextClass.includes("enemy")) {
 		document.getElementById("lose").style.display = "block";
+		clearTimeout(currentAnimation);
 		return;
 	}
-	
+
 	//if moved into flag, moved up a level
 	levelUp(nextClass);
 	
@@ -264,15 +316,56 @@ function tryToMove(direction) {
 
 //move up a level
 function levelUp(nextClass) {
+	
+	console.log(levelCount);
+	
+	if(levelCount == 5){
+			document.getElementById("win").style.display = "block";
+			clearTimeout(currentAnimation);
+			return;
+		}
+	
 	if(nextClass == "flag" && passengerOn) {
-		console.log("win");
+	currentLevel++;
+	
+	if(levelCount == 4){
+			document.getElementById("win").style.display = "block";
+			return;
+		}//if
+		
 		document.getElementById("levelup").style.display = "block";
+		
 		clearTimeout(currentAnimation);
+		
 		setTimeout(function(){
 			document.getElementById("levelup").style.display = "none";
-			currentLevel++;
 			loadLevel();
+			levelCount++;
 		}, 1000);
 	}//if
 	
 }//levelUp
+
+function loadIntro(){
+	document.getElementById("title").style.display = "none";
+	document.getElementById("two").style.display = "block";
+}
+
+function loadIntro1(){
+	document.getElementById("two").style.display = "none";
+	document.getElementById("three").style.display = "block";
+}
+
+function loadIntro2(){
+	document.getElementById("three").style.display = "none";
+	document.getElementById("four").style.display = "block";
+}
+
+function loadIntro3(){
+	document.getElementById("four").style.display = "none";
+	document.getElementById("five").style.display = "block";
+}
+
+function reload() {
+	location.reload();
+}//
